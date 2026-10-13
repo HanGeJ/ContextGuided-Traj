@@ -1,0 +1,295 @@
+{
+  "version": "1.0",
+  "status": "COMPLETE",
+  "total_required": 60,
+  "completed": 60,
+  "missing": [],
+  "variants": {
+    "base_losses": {
+      "complete_folds": [
+        "eth",
+        "hotel",
+        "univ",
+        "zara1",
+        "zara2"
+      ],
+      "folds": {
+        "eth": {
+          "arm": "base_losses",
+          "fold": "eth",
+          "n_seeds": 3,
+          "minade_k": 0.3166309891383096,
+          "minfde_k": 0.5024856064916113,
+          "top1_ade": 0.7801781060044419,
+          "top1_fde": 1.5377299490707077
+        },
+        "hotel": {
+          "arm": "base_losses",
+          "fold": "hotel",
+          "n_seeds": 3,
+          "minade_k": 0.21259247899979583,
+          "minfde_k": 0.35561076310253886,
+          "top1_ade": 0.4038818317235902,
+          "top1_fde": 0.7705086618615674
+        },
+        "univ": {
+          "arm": "base_losses",
+          "fold": "univ",
+          "n_seeds": 3,
+          "minade_k": 0.3135198870307417,
+          "minfde_k": 0.5595926434165895,
+          "top1_ade": 0.6984586049732876,
+          "top1_fde": 1.4566055828636635
+        },
+        "zara1": {
+          "arm": "base_losses",
+          "fold": "zara1",
+          "n_seeds": 3,
+          "minade_k": 0.2044463116753621,
+          "minfde_k": 0.3566205484859,
+          "top1_ade": 0.4875811675239838,
+          "top1_fde": 1.0379959916285897
+        },
+        "zara2": {
+          "arm": "base_losses",
+          "fold": "zara2",
+          "n_seeds": 3,
+          "minade_k": 0.14787189741122542,
+          "minfde_k": 0.25483593480841155,
+          "top1_ade": 0.34832345475534626,
+          "top1_fde": 0.7516730268258397
+        }
+      },
+      "macro": {
+        "minade_k": 0.2390123128510869,
+        "minfde_k": 0.4058290992610103,
+        "top1_ade": 0.5436846329961299,
+        "top1_fde": 1.1109026424500734
+      }
+    },
+    "rotation_only": {
+      "complete_folds": [
+        "eth",
+        "hotel",
+        "univ",
+        "zara1",
+        "zara2"
+      ],
+      "folds": {
+        "eth": {
+          "arm": "rotation_only",
+          "fold": "eth",
+          "n_seeds": 3,
+          "minade_k": 0.3378199117656752,
+          "minfde_k": 0.5497563307274972,
+          "top1_ade": 0.879938184850163,
+          "top1_fde": 1.7339205546696494
+        },
+        "hotel": {
+          "arm": "rotation_only",
+          "fold": "hotel",
+          "n_seeds": 3,
+          "minade_k": 0.15522049792053164,
+          "minfde_k": 0.23869551509849785,
+          "top1_ade": 0.3322249392391175,
+          "top1_fde": 0.6107682045485622
+        },
+        "univ": {
+          "arm": "rotation_only",
+          "fold": "univ",
+          "n_seeds": 3,
+          "minade_k": 0.2339513072383624,
+          "minfde_k": 0.4128477737945473,
+          "top1_ade": 0.6491631697901407,
+          "top1_fde": 1.365360589776752
+        },
+        "zara1": {
+          "arm": "rotation_only",
+          "fold": "zara1",
+          "n_seeds": 3,
+          "minade_k": 0.21851541805247096,
+          "minfde_k": 0.4014462735366875,
+          "top1_ade": 0.5188939831623872,
+          "top1_fde": 1.0827806640224533
+        },
+        "zara2": {
+          "arm": "rotation_only",
+          "fold": "zara2",
+          "n_seeds": 3,
+          "minade_k": 0.1440882489850006,
+          "minfde_k": 0.2569529735262086,
+          "top1_ade": 0.3474079886433504,
+          "top1_fde": 0.7549664963387662
+        }
+      },
+      "macro": {
+        "minade_k": 0.21791907679240818,
+        "minfde_k": 0.3719397733366877,
+        "top1_ade": 0.5455256531370318,
+        "top1_fde": 1.1095593018712366
+      }
+    },
+    "mask_noise_only": {
+      "complete_folds": [
+        "eth",
+        "hotel",
+        "univ",
+        "zara1",
+        "zara2"
+      ],
+      "folds": {
+        "eth": {
+          "arm": "mask_noise_only",
+          "fold": "eth",
+          "n_seeds": 3,
+          "minade_k": 0.30543508685629334,
+          "minfde_k": 0.49936429597959925,
+          "top1_ade": 0.7452962789356755,
+          "top1_fde": 1.5038840725117268
+        },
+        "hotel": {
+          "arm": "mask_noise_only",
+          "fold": "hotel",
+          "n_seeds": 3,
+          "minade_k": 0.173677778678347,
+          "minfde_k": 0.30676215563633646,
+          "top1_ade": 0.4295576937993368,
+          "top1_fde": 0.8827068494087041
+        },
+        "univ": {
+          "arm": "mask_noise_only",
+          "fold": "univ",
+          "n_seeds": 3,
+          "minade_k": 0.31560658247168477,
+          "minfde_k": 0.5662485032427775,
+          "top1_ade": 0.6912438653533384,
+          "top1_fde": 1.4359140878671763
+        },
+        "zara1": {
+          "arm": "mask_noise_only",
+          "fold": "zara1",
+          "n_seeds": 3,
+          "minade_k": 0.1971373860368502,
+          "minfde_k": 0.34353607405561076,
+          "top1_ade": 0.5003446982145715,
+          "top1_fde": 1.0518726330391754
+        },
+        "zara2": {
+          "arm": "mask_noise_only",
+          "fold": "zara2",
+          "n_seeds": 3,
+          "minade_k": 0.1477077068461581,
+          "minfde_k": 0.258107922148449,
+          "top1_ade": 0.34702607236268895,
+          "top1_fde": 0.7472068865018179
+        }
+      },
+      "macro": {
+        "minade_k": 0.22791290817786666,
+        "minfde_k": 0.39480379021255463,
+        "top1_ade": 0.5426937217331222,
+        "top1_fde": 1.12431690586572
+      }
+    },
+    "rotation_mask_noise": {
+      "complete_folds": [
+        "eth",
+        "hotel",
+        "univ",
+        "zara1",
+        "zara2"
+      ],
+      "folds": {
+        "eth": {
+          "arm": "rotation_mask_noise",
+          "fold": "eth",
+          "n_seeds": 3,
+          "minade_k": 0.29188564425826957,
+          "minfde_k": 0.46819035965427697,
+          "top1_ade": 0.7097428701447456,
+          "top1_fde": 1.3975515304186976
+        },
+        "hotel": {
+          "arm": "rotation_mask_noise",
+          "fold": "hotel",
+          "n_seeds": 3,
+          "minade_k": 0.14319021138571955,
+          "minfde_k": 0.23394520383472592,
+          "top1_ade": 0.29518348146778667,
+          "top1_fde": 0.5536206239692925
+        },
+        "univ": {
+          "arm": "rotation_mask_noise",
+          "fold": "univ",
+          "n_seeds": 3,
+          "minade_k": 0.2403626962565694,
+          "minfde_k": 0.425065163119255,
+          "top1_ade": 0.6483830741871688,
+          "top1_fde": 1.3648608529336037
+        },
+        "zara1": {
+          "arm": "rotation_mask_noise",
+          "fold": "zara1",
+          "n_seeds": 3,
+          "minade_k": 0.21246605404838712,
+          "minfde_k": 0.389420047157824,
+          "top1_ade": 0.46246419065269834,
+          "top1_fde": 0.9945160063161779
+        },
+        "zara2": {
+          "arm": "rotation_mask_noise",
+          "fold": "zara2",
+          "n_seeds": 3,
+          "minade_k": 0.1511744064391836,
+          "minfde_k": 0.2725200794103518,
+          "top1_ade": 0.36634809379851957,
+          "top1_fde": 0.7970059158972811
+        }
+      },
+      "macro": {
+        "minade_k": 0.20781580247762585,
+        "minfde_k": 0.3578281706352867,
+        "top1_ade": 0.49642434205018376,
+        "top1_fde": 1.0215109859070106
+      }
+    }
+  },
+  "legacy_table_for_context_only": {
+    "base_losses": {
+      "ade": 0.227,
+      "fde": 0.389
+    },
+    "rotation_only": {
+      "ade": 0.213,
+      "fde": 0.368
+    },
+    "mask_noise_only": {
+      "ade": 0.218,
+      "fde": 0.377
+    },
+    "rotation_mask_noise": {
+      "ade": 0.207,
+      "fde": 0.359
+    }
+  },
+  "generated_utc": "2026-10-11T00:49:25.193851+00:00",
+  "original_table_values_are_not_assumed_valid": true,
+  "differences_from_original": {
+    "base_losses": {
+      "minade": 0.012012312851086893,
+      "minfde": 0.016829099261010283
+    },
+    "rotation_only": {
+      "minade": 0.004919076792408189,
+      "minfde": 0.003939773336687713
+    },
+    "mask_noise_only": {
+      "minade": 0.009912908177866664,
+      "minfde": 0.017803790212554627
+    },
+    "rotation_mask_noise": {
+      "minade": 0.0008158024776258599,
+      "minfde": -0.0011718293647132727
+    }
+  }
+}

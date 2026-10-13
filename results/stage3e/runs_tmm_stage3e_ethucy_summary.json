@@ -1,0 +1,989 @@
+{
+  "stage": "TMM-v1 Stage 3E",
+  "protocol": "ETH/UCY five-scene leave-one-out; train-group validation; final held-out fold evaluated after architecture lock",
+  "rows": [
+    {
+      "variant": "baseline",
+      "fold": "eth",
+      "seed": 42,
+      "top1_ade": 0.6552514051697869,
+      "top1_fde": 1.303408528341076,
+      "minade_k": 0.6258814473962091,
+      "minfde_k": 1.1306318501616217,
+      "params": 108,
+      "flops": 408,
+      "path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/baseline/eth/seed_42/summary.json"
+    },
+    {
+      "variant": "baseline",
+      "fold": "eth",
+      "seed": 43,
+      "top1_ade": 0.6298395659327051,
+      "top1_fde": 1.255999253374434,
+      "minade_k": 0.6013338458656626,
+      "minfde_k": 1.0830183853698123,
+      "params": 108,
+      "flops": 408,
+      "path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/baseline/eth/seed_43/summary.json"
+    },
+    {
+      "variant": "baseline",
+      "fold": "eth",
+      "seed": 44,
+      "top1_ade": 0.5532633322472781,
+      "top1_fde": 1.1354468560164086,
+      "minade_k": 0.5271016001336521,
+      "minfde_k": 0.9630646036614329,
+      "params": 108,
+      "flops": 408,
+      "path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/baseline/eth/seed_44/summary.json"
+    },
+    {
+      "variant": "baseline",
+      "fold": "hotel",
+      "seed": 42,
+      "top1_ade": 0.22842916172604227,
+      "top1_fde": 0.43634313744167946,
+      "minade_k": 0.21724777670793755,
+      "minfde_k": 0.3252070303295934,
+      "params": 108,
+      "flops": 408,
+      "path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/baseline/hotel/seed_42/summary.json"
+    },
+    {
+      "variant": "baseline",
+      "fold": "hotel",
+      "seed": 43,
+      "top1_ade": 0.22742121793502984,
+      "top1_fde": 0.43298187494277957,
+      "minade_k": 0.21637282357659451,
+      "minfde_k": 0.32363910120587014,
+      "params": 108,
+      "flops": 408,
+      "path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/baseline/hotel/seed_43/summary.json"
+    },
+    {
+      "variant": "baseline",
+      "fold": "hotel",
+      "seed": 44,
+      "top1_ade": 0.22984578656595805,
+      "top1_fde": 0.4407788748519365,
+      "minade_k": 0.2189295950601267,
+      "minfde_k": 0.32830626160599463,
+      "params": 108,
+      "flops": 408,
+      "path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/baseline/hotel/seed_44/summary.json"
+    },
+    {
+      "variant": "baseline",
+      "fold": "univ",
+      "seed": 42,
+      "top1_ade": 0.5934533447857205,
+      "top1_fde": 1.2589833402079538,
+      "minade_k": 0.5713498801225843,
+      "minfde_k": 1.0999612004836703,
+      "params": 108,
+      "flops": 408,
+      "path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/baseline/univ/seed_42/summary.json"
+    },
+    {
+      "variant": "baseline",
+      "fold": "univ",
+      "seed": 43,
+      "top1_ade": 0.604767260771671,
+      "top1_fde": 1.2762897335295924,
+      "minade_k": 0.5821540646552085,
+      "minfde_k": 1.116672798202406,
+      "params": 108,
+      "flops": 408,
+      "path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/baseline/univ/seed_43/summary.json"
+    },
+    {
+      "variant": "baseline",
+      "fold": "univ",
+      "seed": 44,
+      "top1_ade": 0.5984625313592994,
+      "top1_fde": 1.264541357730582,
+      "minade_k": 0.5761257828822525,
+      "minfde_k": 1.1057406895721014,
+      "params": 108,
+      "flops": 408,
+      "path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/baseline/univ/seed_44/summary.json"
+    },
+    {
+      "variant": "baseline",
+      "fold": "zara1",
+      "seed": 42,
+      "top1_ade": 0.502881866410147,
+      "top1_fde": 1.085982482987875,
+      "minade_k": 0.4821408040353519,
+      "minfde_k": 0.915857093747079,
+      "params": 108,
+      "flops": 408,
+      "path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/baseline/zara1/seed_42/summary.json"
+    },
+    {
+      "variant": "baseline",
+      "fold": "zara1",
+      "seed": 43,
+      "top1_ade": 0.5000421446835044,
+      "top1_fde": 1.082188074880221,
+      "minade_k": 0.4802638461310511,
+      "minfde_k": 0.9141560115919454,
+      "params": 108,
+      "flops": 408,
+      "path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/baseline/zara1/seed_43/summary.json"
+    },
+    {
+      "variant": "baseline",
+      "fold": "zara1",
+      "seed": 44,
+      "top1_ade": 0.5049236547359991,
+      "top1_fde": 1.0938709578611248,
+      "minade_k": 0.4846164470313968,
+      "minfde_k": 0.9227000854416088,
+      "params": 108,
+      "flops": 408,
+      "path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/baseline/zara1/seed_44/summary.json"
+    },
+    {
+      "variant": "baseline",
+      "fold": "zara2",
+      "seed": 42,
+      "top1_ade": 0.37656708571511477,
+      "top1_fde": 0.7975746640497456,
+      "minade_k": 0.3628496617230062,
+      "minfde_k": 0.6910304318224718,
+      "params": 108,
+      "flops": 408,
+      "path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/baseline/zara2/seed_42/summary.json"
+    },
+    {
+      "variant": "baseline",
+      "fold": "zara2",
+      "seed": 43,
+      "top1_ade": 0.3770985007286072,
+      "top1_fde": 0.8004110823629673,
+      "minade_k": 0.36329975394428077,
+      "minfde_k": 0.6914765144766083,
+      "params": 108,
+      "flops": 408,
+      "path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/baseline/zara2/seed_43/summary.json"
+    },
+    {
+      "variant": "baseline",
+      "fold": "zara2",
+      "seed": 44,
+      "top1_ade": 0.37249472156393953,
+      "top1_fde": 0.7906123534071869,
+      "minade_k": 0.3588932050666228,
+      "minfde_k": 0.6844754566597656,
+      "params": 108,
+      "flops": 408,
+      "path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/baseline/zara2/seed_44/summary.json"
+    },
+    {
+      "variant": "multihyp",
+      "fold": "eth",
+      "seed": 42,
+      "top1_ade": 0.6316956942922393,
+      "top1_fde": 1.2422136455979527,
+      "minade_k": 0.30286075597787143,
+      "minfde_k": 0.49406985467686027,
+      "params": 70912,
+      "flops": 140908,
+      "path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/multihyp/eth/seed_42/summary.json"
+    },
+    {
+      "variant": "multihyp",
+      "fold": "eth",
+      "seed": 43,
+      "top1_ade": 0.7225760418035279,
+      "top1_fde": 1.424726678746843,
+      "minade_k": 0.30225870412273453,
+      "minfde_k": 0.48728433723384035,
+      "params": 70912,
+      "flops": 140908,
+      "path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/multihyp/eth/seed_43/summary.json"
+    },
+    {
+      "variant": "multihyp",
+      "fold": "eth",
+      "seed": 44,
+      "top1_ade": 0.6938125613361438,
+      "top1_fde": 1.2903477990545202,
+      "minade_k": 0.2919693101929998,
+      "minfde_k": 0.4660232105187633,
+      "params": 70912,
+      "flops": 140908,
+      "path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/multihyp/eth/seed_44/summary.json"
+    },
+    {
+      "variant": "multihyp",
+      "fold": "hotel",
+      "seed": 42,
+      "top1_ade": 0.3185500591300255,
+      "top1_fde": 0.6023966009672298,
+      "minade_k": 0.1485086132897887,
+      "minfde_k": 0.24909635385801626,
+      "params": 70912,
+      "flops": 140908,
+      "path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/multihyp/hotel/seed_42/summary.json"
+    },
+    {
+      "variant": "multihyp",
+      "fold": "hotel",
+      "seed": 43,
+      "top1_ade": 0.30727516651153564,
+      "top1_fde": 0.5859976925960807,
+      "minade_k": 0.1424504592806794,
+      "minfde_k": 0.2350104048640229,
+      "params": 70912,
+      "flops": 140908,
+      "path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/multihyp/hotel/seed_43/summary.json"
+    },
+    {
+      "variant": "multihyp",
+      "fold": "hotel",
+      "seed": 44,
+      "top1_ade": 0.30118110529212067,
+      "top1_fde": 0.5310801906363909,
+      "minade_k": 0.15922930326572685,
+      "minfde_k": 0.25249610055324645,
+      "params": 70912,
+      "flops": 140908,
+      "path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/multihyp/hotel/seed_44/summary.json"
+    },
+    {
+      "variant": "multihyp",
+      "fold": "univ",
+      "seed": 42,
+      "top1_ade": 0.7017847568113181,
+      "top1_fde": 1.462756168247583,
+      "minade_k": 0.23560285631651584,
+      "minfde_k": 0.4188077717356681,
+      "params": 70912,
+      "flops": 140908,
+      "path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/multihyp/univ/seed_42/summary.json"
+    },
+    {
+      "variant": "multihyp",
+      "fold": "univ",
+      "seed": 43,
+      "top1_ade": 0.6658583800197005,
+      "top1_fde": 1.3974021253450148,
+      "minade_k": 0.2366332642481767,
+      "minfde_k": 0.4218794432915993,
+      "params": 70912,
+      "flops": 140908,
+      "path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/multihyp/univ/seed_43/summary.json"
+    },
+    {
+      "variant": "multihyp",
+      "fold": "univ",
+      "seed": 44,
+      "top1_ade": 0.613599458464017,
+      "top1_fde": 1.288001566118574,
+      "minade_k": 0.23693201844760542,
+      "minfde_k": 0.4176500843512799,
+      "params": 70912,
+      "flops": 140908,
+      "path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/multihyp/univ/seed_44/summary.json"
+    },
+    {
+      "variant": "multihyp",
+      "fold": "zara1",
+      "seed": 42,
+      "top1_ade": 0.5012920085966891,
+      "top1_fde": 1.0334729733410433,
+      "minade_k": 0.22192275233199923,
+      "minfde_k": 0.4078567402472116,
+      "params": 70912,
+      "flops": 140908,
+      "path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/multihyp/zara1/seed_42/summary.json"
+    },
+    {
+      "variant": "multihyp",
+      "fold": "zara1",
+      "seed": 43,
+      "top1_ade": 0.45573364094481605,
+      "top1_fde": 0.9745208563343171,
+      "minade_k": 0.21668656615632095,
+      "minfde_k": 0.3883556417981716,
+      "params": 70912,
+      "flops": 140908,
+      "path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/multihyp/zara1/seed_43/summary.json"
+    },
+    {
+      "variant": "multihyp",
+      "fold": "zara1",
+      "seed": 44,
+      "top1_ade": 0.4599084712451099,
+      "top1_fde": 0.9954848260142807,
+      "minade_k": 0.2147195657212382,
+      "minfde_k": 0.40349559792031253,
+      "params": 70912,
+      "flops": 140908,
+      "path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/multihyp/zara1/seed_44/summary.json"
+    },
+    {
+      "variant": "multihyp",
+      "fold": "zara2",
+      "seed": 42,
+      "top1_ade": 0.36172831534532524,
+      "top1_fde": 0.7737032493762357,
+      "minade_k": 0.1500401176726556,
+      "minfde_k": 0.27271814749729006,
+      "params": 70912,
+      "flops": 140908,
+      "path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/multihyp/zara2/seed_42/summary.json"
+    },
+    {
+      "variant": "multihyp",
+      "fold": "zara2",
+      "seed": 43,
+      "top1_ade": 0.36542666968960447,
+      "top1_fde": 0.7868386022935664,
+      "minade_k": 0.15030998916391997,
+      "minfde_k": 0.25825668772061666,
+      "params": 70912,
+      "flops": 140908,
+      "path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/multihyp/zara2/seed_43/summary.json"
+    },
+    {
+      "variant": "multihyp",
+      "fold": "zara2",
+      "seed": 44,
+      "top1_ade": 0.3614989408583407,
+      "top1_fde": 0.7798434284132749,
+      "minade_k": 0.1486300299817132,
+      "minfde_k": 0.26299802923162174,
+      "params": 70912,
+      "flops": 140908,
+      "path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/multihyp/zara2/seed_44/summary.json"
+    },
+    {
+      "variant": "multihyp_social",
+      "fold": "eth",
+      "seed": 42,
+      "top1_ade": 0.6583053781590392,
+      "top1_fde": 1.2765392423496962,
+      "minade_k": 0.296765000722567,
+      "minfde_k": 0.48035081847077027,
+      "params": 82529,
+      "flops": 241324,
+      "path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/multihyp_social/eth/seed_42/summary.json"
+    },
+    {
+      "variant": "multihyp_social",
+      "fold": "eth",
+      "seed": 43,
+      "top1_ade": 0.6526277777158128,
+      "top1_fde": 1.2739273335702017,
+      "minade_k": 0.2997878958865168,
+      "minfde_k": 0.47907926918626653,
+      "params": 82529,
+      "flops": 241324,
+      "path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/multihyp_social/eth/seed_43/summary.json"
+    },
+    {
+      "variant": "multihyp_social",
+      "fold": "eth",
+      "seed": 44,
+      "top1_ade": 0.6758906180017671,
+      "top1_fde": 1.3373456762871307,
+      "minade_k": 0.2990372594568505,
+      "minfde_k": 0.48330413316987175,
+      "params": 82529,
+      "flops": 241324,
+      "path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/multihyp_social/eth/seed_44/summary.json"
+    },
+    {
+      "variant": "multihyp_social",
+      "fold": "hotel",
+      "seed": 42,
+      "top1_ade": 0.2964210169259892,
+      "top1_fde": 0.5493600500461667,
+      "minade_k": 0.146034317307694,
+      "minfde_k": 0.2421108293810556,
+      "params": 82529,
+      "flops": 241324,
+      "path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/multihyp_social/hotel/seed_42/summary.json"
+    },
+    {
+      "variant": "multihyp_social",
+      "fold": "hotel",
+      "seed": 43,
+      "top1_ade": 0.26561157592507295,
+      "top1_fde": 0.5034877905734749,
+      "minade_k": 0.13536858895490336,
+      "minfde_k": 0.21675275586372197,
+      "params": 82529,
+      "flops": 241324,
+      "path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/multihyp_social/hotel/seed_43/summary.json"
+    },
+    {
+      "variant": "multihyp_social",
+      "fold": "hotel",
+      "seed": 44,
+      "top1_ade": 0.28754651718361435,
+      "top1_fde": 0.5314956680563994,
+      "minade_k": 0.14592753309150075,
+      "minfde_k": 0.2398188611241274,
+      "params": 82529,
+      "flops": 241324,
+      "path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/multihyp_social/hotel/seed_44/summary.json"
+    },
+    {
+      "variant": "multihyp_social",
+      "fold": "univ",
+      "seed": 42,
+      "top1_ade": 0.6754860112242411,
+      "top1_fde": 1.418156855556822,
+      "minade_k": 0.24066839536285858,
+      "minfde_k": 0.42396830367889127,
+      "params": 82529,
+      "flops": 241324,
+      "path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/multihyp_social/univ/seed_42/summary.json"
+    },
+    {
+      "variant": "multihyp_social",
+      "fold": "univ",
+      "seed": 43,
+      "top1_ade": 0.635320929472061,
+      "top1_fde": 1.3423647531357683,
+      "minade_k": 0.23967925720596045,
+      "minfde_k": 0.42987873243965524,
+      "params": 82529,
+      "flops": 241324,
+      "path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/multihyp_social/univ/seed_43/summary.json"
+    },
+    {
+      "variant": "multihyp_social",
+      "fold": "univ",
+      "seed": 44,
+      "top1_ade": 0.6351226526996794,
+      "top1_fde": 1.350962983374843,
+      "minade_k": 0.24359478732312378,
+      "minfde_k": 0.4346385083607456,
+      "params": 82529,
+      "flops": 241324,
+      "path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/multihyp_social/univ/seed_44/summary.json"
+    },
+    {
+      "variant": "multihyp_social",
+      "fold": "zara1",
+      "seed": 42,
+      "top1_ade": 0.49931946432246416,
+      "top1_fde": 1.0377936853010505,
+      "minade_k": 0.2171156803345235,
+      "minfde_k": 0.39056602165937826,
+      "params": 82529,
+      "flops": 241324,
+      "path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/multihyp_social/zara1/seed_42/summary.json"
+    },
+    {
+      "variant": "multihyp_social",
+      "fold": "zara1",
+      "seed": 43,
+      "top1_ade": 0.49508750732159573,
+      "top1_fde": 1.0893000457404223,
+      "minade_k": 0.2153138343769747,
+      "minfde_k": 0.40520833814690593,
+      "params": 82529,
+      "flops": 241324,
+      "path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/multihyp_social/zara1/seed_43/summary.json"
+    },
+    {
+      "variant": "multihyp_social",
+      "fold": "zara1",
+      "seed": 44,
+      "top1_ade": 0.49609184189239464,
+      "top1_fde": 1.0105718818504257,
+      "minade_k": 0.21544328263639798,
+      "minfde_k": 0.39368220890519573,
+      "params": 82529,
+      "flops": 241324,
+      "path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/multihyp_social/zara1/seed_44/summary.json"
+    },
+    {
+      "variant": "multihyp_social",
+      "fold": "zara2",
+      "seed": 42,
+      "top1_ade": 0.360322550690517,
+      "top1_fde": 0.7725126517807368,
+      "minade_k": 0.15094810412115656,
+      "minfde_k": 0.2716255376685896,
+      "params": 82529,
+      "flops": 241324,
+      "path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/multihyp_social/zara2/seed_42/summary.json"
+    },
+    {
+      "variant": "multihyp_social",
+      "fold": "zara2",
+      "seed": 43,
+      "top1_ade": 0.3517629799907381,
+      "top1_fde": 0.7632095810927312,
+      "minade_k": 0.15063294857084852,
+      "minfde_k": 0.2686814241905503,
+      "params": 82529,
+      "flops": 241324,
+      "path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/multihyp_social/zara2/seed_43/summary.json"
+    },
+    {
+      "variant": "multihyp_social",
+      "fold": "zara2",
+      "seed": 44,
+      "top1_ade": 0.358979146835566,
+      "top1_fde": 0.7842862717794686,
+      "minade_k": 0.1528491373090373,
+      "minfde_k": 0.2772713446475931,
+      "params": 82529,
+      "flops": 241324,
+      "path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/multihyp_social/zara2/seed_44/summary.json"
+    }
+  ],
+  "variants": {
+    "baseline": {
+      "folds": {
+        "eth": {
+          "top1_ade": {
+            "mean": 0.6127847677832566,
+            "sd": 0.043347751649119116,
+            "n": 3
+          },
+          "top1_fde": {
+            "mean": 1.231618212577306,
+            "sd": 0.0707041121165671,
+            "n": 3
+          },
+          "minade_k": {
+            "mean": 0.584772297798508,
+            "sd": 0.041992683585667843,
+            "n": 3
+          },
+          "minfde_k": {
+            "mean": 1.0589049463976223,
+            "sd": 0.07050195732135343,
+            "n": 3
+          }
+        },
+        "hotel": {
+          "top1_ade": {
+            "mean": 0.22856538874234342,
+            "sd": 0.0009945020903272845,
+            "n": 3
+          },
+          "top1_fde": {
+            "mean": 0.4367012957454652,
+            "sd": 0.0031931708299407077,
+            "n": 3
+          },
+          "minade_k": {
+            "mean": 0.21751673178155292,
+            "sd": 0.0010609815356446915,
+            "n": 3
+          },
+          "minfde_k": {
+            "mean": 0.32571746438048604,
+            "sd": 0.0019392444818116773,
+            "n": 3
+          }
+        },
+        "univ": {
+          "top1_ade": {
+            "mean": 0.5988943789722303,
+            "sd": 0.004628969864154934,
+            "n": 3
+          },
+          "top1_fde": {
+            "mean": 1.2666048104893761,
+            "sd": 0.007214392578572631,
+            "n": 3
+          },
+          "minade_k": {
+            "mean": 0.5765432425533484,
+            "sd": 0.004420656458528359,
+            "n": 3
+          },
+          "minfde_k": {
+            "mean": 1.1074582294193924,
+            "sd": 0.006929734575171375,
+            "n": 3
+          }
+        },
+        "zara1": {
+          "top1_ade": {
+            "mean": 0.5026158886098835,
+            "sd": 0.0020017231311758176,
+            "n": 3
+          },
+          "top1_fde": {
+            "mean": 1.0873471719097403,
+            "sd": 0.004866156633762668,
+            "n": 3
+          },
+          "minade_k": {
+            "mean": 0.4823403657326,
+            "sd": 0.001782536077742209,
+            "n": 3
+          },
+          "minfde_k": {
+            "mean": 0.9175710635935443,
+            "sd": 0.0036926565832807305,
+            "n": 3
+          }
+        },
+        "zara2": {
+          "top1_ade": {
+            "mean": 0.37538676933588716,
+            "sd": 0.0020564622884234472,
+            "n": 3
+          },
+          "top1_fde": {
+            "mean": 0.7961993666066333,
+            "sd": 0.004116823579734398,
+            "n": 3
+          },
+          "minade_k": {
+            "mean": 0.3616808735779699,
+            "sd": 0.001979725157486959,
+            "n": 3
+          },
+          "minfde_k": {
+            "mean": 0.6889941343196152,
+            "sd": 0.0032003732364416955,
+            "n": 3
+          }
+        }
+      },
+      "macro_across_folds": {
+        "top1_ade": {
+          "mean": 0.4636494386887202,
+          "sd": 0.14498671236797014,
+          "n": 5
+        },
+        "top1_fde": {
+          "mean": 0.9636941714657041,
+          "sd": 0.3113211243307395,
+          "n": 5
+        },
+        "minade_k": {
+          "mean": 0.44457070228879586,
+          "sd": 0.1392293183713977,
+          "n": 5
+        },
+        "minfde_k": {
+          "mean": 0.8197291676221321,
+          "sd": 0.2866026219821434,
+          "n": 5
+        }
+      },
+      "completed_runs": 15,
+      "params": {
+        "mean": 108.0,
+        "sd": 0.0,
+        "n": 15
+      },
+      "flops": {
+        "mean": 408.0,
+        "sd": 0.0,
+        "n": 15
+      }
+    },
+    "multihyp": {
+      "folds": {
+        "eth": {
+          "top1_ade": {
+            "mean": 0.6826947658106369,
+            "sd": 0.03792548328809517,
+            "n": 3
+          },
+          "top1_fde": {
+            "mean": 1.3190960411331052,
+            "sd": 0.07723383491820437,
+            "n": 3
+          },
+          "minade_k": {
+            "mean": 0.2990295900978686,
+            "sd": 0.004998418473903443,
+            "n": 3
+          },
+          "minfde_k": {
+            "mean": 0.4824591341431546,
+            "sd": 0.011947538122489259,
+            "n": 3
+          }
+        },
+        "hotel": {
+          "top1_ade": {
+            "mean": 0.30900211031122726,
+            "sd": 0.007195224829532763,
+            "n": 3
+          },
+          "top1_fde": {
+            "mean": 0.5731581613999005,
+            "sd": 0.030497516473995175,
+            "n": 3
+          },
+          "minade_k": {
+            "mean": 0.15006279194539832,
+            "sd": 0.006937531013206601,
+            "n": 3
+          },
+          "minfde_k": {
+            "mean": 0.2455342864250952,
+            "sd": 0.007569836269983673,
+            "n": 3
+          }
+        },
+        "univ": {
+          "top1_ade": {
+            "mean": 0.6604141984316786,
+            "sd": 0.036206730921410614,
+            "n": 3
+          },
+          "top1_fde": {
+            "mean": 1.382719953237057,
+            "sd": 0.07209469409359158,
+            "n": 3
+          },
+          "minade_k": {
+            "mean": 0.23638937967076598,
+            "sd": 0.0005693726126212675,
+            "n": 3
+          },
+          "minfde_k": {
+            "mean": 0.41944576645951576,
+            "sd": 0.0017845909358091044,
+            "n": 3
+          }
+        },
+        "zara1": {
+          "top1_ade": {
+            "mean": 0.4723113735955384,
+            "sd": 0.02056315808773068,
+            "n": 3
+          },
+          "top1_fde": {
+            "mean": 1.001159551896547,
+            "sd": 0.024399315704514223,
+            "n": 3
+          },
+          "minade_k": {
+            "mean": 0.21777629473651947,
+            "sd": 0.0030399677214555886,
+            "n": 3
+          },
+          "minfde_k": {
+            "mean": 0.3999026599885653,
+            "sd": 0.008356838015095926,
+            "n": 3
+          }
+        },
+        "zara2": {
+          "top1_ade": {
+            "mean": 0.36288464196442344,
+            "sd": 0.0017999225687996482,
+            "n": 3
+          },
+          "top1_fde": {
+            "mean": 0.780128426694359,
+            "sd": 0.005366270715054214,
+            "n": 3
+          },
+          "minade_k": {
+            "mean": 0.14966004560609625,
+            "sd": 0.0007366169494403525,
+            "n": 3
+          },
+          "minfde_k": {
+            "mean": 0.2646576214831762,
+            "sd": 0.006019365390091676,
+            "n": 3
+          }
+        }
+      },
+      "macro_across_folds": {
+        "top1_ade": {
+          "mean": 0.49746141802270094,
+          "sd": 0.15174013696300587,
+          "n": 5
+        },
+        "top1_fde": {
+          "mean": 1.0112524268721939,
+          "sd": 0.30925800523447644,
+          "n": 5
+        },
+        "minade_k": {
+          "mean": 0.21058362041132975,
+          "sd": 0.056417752479069834,
+          "n": 5
+        },
+        "minfde_k": {
+          "mean": 0.36239989369990144,
+          "sd": 0.0919630711055441,
+          "n": 5
+        }
+      },
+      "completed_runs": 15,
+      "params": {
+        "mean": 70912.0,
+        "sd": 0.0,
+        "n": 15
+      },
+      "flops": {
+        "mean": 140908.0,
+        "sd": 0.0,
+        "n": 15
+      }
+    },
+    "multihyp_social": {
+      "folds": {
+        "eth": {
+          "top1_ade": {
+            "mean": 0.6622745912922063,
+            "sd": 0.00990306094817268,
+            "n": 3
+          },
+          "top1_fde": {
+            "mean": 1.295937417402343,
+            "sd": 0.029299470356649905,
+            "n": 3
+          },
+          "minade_k": {
+            "mean": 0.2985300520219781,
+            "sd": 0.0012851506603118845,
+            "n": 3
+          },
+          "minfde_k": {
+            "mean": 0.48091140694230283,
+            "sd": 0.001769757703906116,
+            "n": 3
+          }
+        },
+        "hotel": {
+          "top1_ade": {
+            "mean": 0.28319303667822554,
+            "sd": 0.012949131452992911,
+            "n": 3
+          },
+          "top1_fde": {
+            "mean": 0.5281145028920137,
+            "sd": 0.018879270036809018,
+            "n": 3
+          },
+          "minade_k": {
+            "mean": 0.14244347978469937,
+            "sd": 0.0050028932234162105,
+            "n": 3
+          },
+          "minfde_k": {
+            "mean": 0.232894148789635,
+            "sd": 0.011451978106109813,
+            "n": 3
+          }
+        },
+        "univ": {
+          "top1_ade": {
+            "mean": 0.6486431977986605,
+            "sd": 0.01898090800199006,
+            "n": 3
+          },
+          "top1_fde": {
+            "mean": 1.3704948640224777,
+            "sd": 0.0338844258086805,
+            "n": 3
+          },
+          "minade_k": {
+            "mean": 0.24131414663064762,
+            "sd": 0.0016624459990210463,
+            "n": 3
+          },
+          "minfde_k": {
+            "mean": 0.42949518149309734,
+            "sd": 0.0043645275028438455,
+            "n": 3
+          }
+        },
+        "zara1": {
+          "top1_ade": {
+            "mean": 0.4968329378454848,
+            "sd": 0.001805414527297416,
+            "n": 3
+          },
+          "top1_fde": {
+            "mean": 1.0458885376306328,
+            "sd": 0.03264634663634763,
+            "n": 3
+          },
+          "minade_k": {
+            "mean": 0.21595759911596538,
+            "sd": 0.0008205905574847475,
+            "n": 3
+          },
+          "minfde_k": {
+            "mean": 0.39648552290382666,
+            "sd": 0.006297792473632921,
+            "n": 3
+          }
+        },
+        "zara2": {
+          "top1_ade": {
+            "mean": 0.3570215591722737,
+            "sd": 0.0037586056577525373,
+            "n": 3
+          },
+          "top1_fde": {
+            "mean": 0.7733361682176456,
+            "sd": 0.008624204584288551,
+            "n": 3
+          },
+          "minade_k": {
+            "mean": 0.15147673000034745,
+            "sd": 0.0009789304098288246,
+            "n": 3
+          },
+          "minfde_k": {
+            "mean": 0.272526102168911,
+            "sd": 0.0035641685032192336,
+            "n": 3
+          }
+        }
+      },
+      "macro_across_folds": {
+        "top1_ade": {
+          "mean": 0.4895930645573702,
+          "sd": 0.15188445995121191,
+          "n": 5
+        },
+        "top1_fde": {
+          "mean": 1.0027542980330226,
+          "sd": 0.3165329813471317,
+          "n": 5
+        },
+        "minade_k": {
+          "mean": 0.2099444015107276,
+          "sd": 0.05803874563864885,
+          "n": 5
+        },
+        "minfde_k": {
+          "mean": 0.36246247245955454,
+          "sd": 0.09440085097253761,
+          "n": 5
+        }
+      },
+      "completed_runs": 15,
+      "params": {
+        "mean": 82529.0,
+        "sd": 0.0,
+        "n": 15
+      },
+      "flops": {
+        "mean": 241324.0,
+        "sd": 0.0,
+        "n": 15
+      }
+    }
+  }
+}

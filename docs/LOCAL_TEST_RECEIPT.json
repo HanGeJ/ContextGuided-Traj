@@ -1,0 +1,24 @@
+{
+  "publication_state": "PRIVATE_CANDIDATE",
+  "tests": {
+    "python_compileall": "PASS",
+    "core_cpu_synthetic_forward": "PASS",
+    "parameters_exact": 82529,
+    "shape_expected": "[2,20,12,2]",
+    "ethucy_synthetic_data_preprocessing": "PASS",
+    "ethucy_cpu_one_epoch_training": "PASS",
+    "train_group_validation": "PASS",
+    "model_checkpoint_creation": "PASS",
+    "autodl_checkpoint_inventory_and_explicit_copy": "PASS",
+    "source_release_file_safety_check": "PASS"
+  },
+  "not_validated": [
+    "real ETH/UCY ADE/FDE regeneration",
+    "SDD trained visual checkpoint loading from AutoDL",
+    "locked SDD pixel-space accuracy reproduction",
+    "RTX4090 performance measurement on a clean machine",
+    "raw figure6 synchronization",
+    "rights/license approval"
+  ],
+  "important": "Synthetic tests do not establish that paper numbers are reproducible."
+}

@@ -1,0 +1,22 @@
+{
+  "stage": "TMM-v1 Stage 3E",
+  "complete": true,
+  "held_out_test_unlocked": true,
+  "locked_configuration": {
+    "variant": "decoupled_social_visual_adapter",
+    "crop_tag": "m16_160px",
+    "visual_backbone": "mobilenet_v3_small",
+    "backbone_trainable": "frozen",
+    "pretrained_backbone": true,
+    "correction_scale": 0.2,
+    "ranking_enabled": false,
+    "selection_basis": "Stage-3D validation only: three seeds; geometry-only social generator + frozen ImageNet MobileNetV3-Small; correction scale 0.20."
+  },
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "result_file": "runs/tmm_stage3e_locked_sdd_test.json",
+  "selection_after_test_forbidden": true
+}

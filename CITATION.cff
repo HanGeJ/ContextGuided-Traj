@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "Please cite the associated manuscript when using this software; publication metadata will be updated after acceptance."
+title: "ContextGuided-Traj: Code for Context-Guided Trend–Residual Learning"
+authors:
+  - family-names: Jiang
+    given-names: Zihan
+  - family-names: Wang
+    given-names: Zidong
+  - family-names: Cao
+    given-names: Haobin
+  - family-names: Liu
+    given-names: Weibo
+  - family-names: Zhang
+    given-names: Weidong
+  - family-names: Liu
+    given-names: Xiaohui
+  - family-names: Liu
+    given-names: Ruonan
+version: "0.1.1-rc2"

@@ -1,0 +1,65 @@
+{
+  "version": "1.3.2",
+  "no_training": true,
+  "no_model_change": true,
+  "paths": {
+    "project": {
+      "path": "<ORIGINAL_PROJECT>",
+      "exists": true
+    },
+    "prior_v131": {
+      "path": "<ORIGINAL_PROJECT>/runs/tmm_efficiency_autobench_v131",
+      "exists": true
+    },
+    "canonical_scene": {
+      "path": "<ORIGINAL_PROJECT>/runs/tmm_efficiency_autobench_v131/canonical_univ_observations.npz",
+      "exists": true
+    },
+    "flow_python": {
+      "path": "<ORIGINAL_PROJECT>/runs/tmm_efficiency_autobench_v1/workspace/envs/flow/bin/python",
+      "exists": true
+    },
+    "flow_repo": {
+      "path": "<ORIGINAL_PROJECT>/runs/tmm_efficiency_autobench_v1/workspace/repos/flow",
+      "exists": true
+    },
+    "flow_checkpoint": {
+      "path": "<ORIGINAL_PROJECT>/runs/tmm_efficiency_autobench_v1/workspace/repos/flow/output/config/TP/FlowChain/CIF_separate_cond_v_trajectron/univ/ckpt.pt",
+      "exists": true
+    },
+    "flow_source": {
+      "path": "<ORIGINAL_PROJECT>/runs/tmm_efficiency_autobench_v1/workspace/repos/flow/src/models/TP/fastpredNF.py",
+      "exists": true
+    }
+  },
+  "strictly_cannot_qualify_without_native_K20": true,
+  "expected_result": "gpu/K20 conditional only; wall has native-preprocessed input cache limitation",
+  "scene_N": 57,
+  "scene_sha256_obs": "74c5eb7b5e1784d057675d46d6ef416c7b5d6cda06469fa64ce88a690c401838",
+  "scene_sha256_file": "df5d6903e09942aa03e8f7b5923c167e7cc83de43b97f369d5595433d9d427f4",
+  "checkpoint_sha256": "2df031fe03d624d23c15ecec61babc830f47c99b1642990cfa7232aa1aa486f2",
+  "native_source_sha256": "a1fe577182ea2176e7aaf6b7ff226212338c2655ebe35d9d8fe3cda74088ace3",
+  "same_scene_5_gpu_certified_N": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    32,
+    57
+  ],
+  "strict_5_wall_certified_N": [],
+  "v131_four_model_certified_N": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    32,
+    57
+  ],
+  "flowchain_result_rows": 7,
+  "blocks": [],
+  "strict_all_five": false,
+  "gpu_5_model_complete": true
+}

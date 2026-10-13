@@ -1,0 +1,84 @@
+{
+  "version": "1.0",
+  "project": "TMM-v1 ETH-UCY Stage3E",
+  "scope": "Controlled Training Augmentation Ablation",
+  "arms": {
+    "base_losses": {
+      "use_augment": false,
+      "rotation_max_deg": 0.0,
+      "mask_prob": 0.0,
+      "noise_std": 0.0
+    },
+    "rotation_only": {
+      "use_augment": true,
+      "rotation_max_deg": 180.0,
+      "mask_prob": 0.0,
+      "noise_std": 0.0
+    },
+    "mask_noise_only": {
+      "use_augment": true,
+      "rotation_max_deg": 0.0,
+      "mask_prob": 0.3,
+      "noise_std": 0.02
+    },
+    "rotation_mask_noise": {
+      "use_augment": true,
+      "rotation_max_deg": 180.0,
+      "mask_prob": 0.3,
+      "noise_std": 0.02
+    }
+  },
+  "common": {
+    "variant": "multihyp_social",
+    "data_root": "data/ethucy_5fold_social",
+    "val_source": "train_group",
+    "val_ratio": 0.1,
+    "epochs": 100,
+    "batch_size": 512,
+    "num_workers": 8,
+    "lr": 0.01,
+    "best_k": 20,
+    "num_modes": 20,
+    "cls_lambda": 0.2,
+    "nll_lambda": 0.1,
+    "ranking_loss": "hard_ce",
+    "checkpoint_metric": "minade_k",
+    "eval_views": 1,
+    "max_mask_steps": 4,
+    "relative_coords": true
+  },
+  "folds": [
+    "eth",
+    "hotel",
+    "univ",
+    "zara1",
+    "zara2"
+  ],
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "variants": {
+    "all": "multihyp_social"
+  },
+  "target_original_table": {
+    "base_losses": [
+      0.227,
+      0.389
+    ],
+    "rotation_only": [
+      0.213,
+      0.368
+    ],
+    "mask_noise_only": [
+      0.218,
+      0.377
+    ],
+    "rotation_mask_noise": [
+      0.207,
+      0.359
+    ]
+  },
+  "original_values_status": "unverified; used for comparison only"
+}

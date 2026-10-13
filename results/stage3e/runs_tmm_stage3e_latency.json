@@ -1,0 +1,41 @@
+{
+  "stage": "TMM-v1 Stage 3E",
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "warmup": 200,
+  "repeats": 2000,
+  "social": {
+    "parameters_total": 82529,
+    "fp32_weight_bytes": 330116,
+    "latency": {
+      "mean_ms": 0.6867296165,
+      "median_ms": 0.6600539999999999,
+      "p95_ms": 0.7749312,
+      "p99_ms": 1.08364372,
+      "min_ms": 0.633361,
+      "max_ms": 4.461674,
+      "repeats": 2000,
+      "deadline_violation_rate_20ms": 0.0,
+      "deadline_violation_rate_50ms": 0.0,
+      "deadline_violation_rate_100ms": 0.0,
+      "peak_cuda_memory_bytes": 19829248
+    }
+  },
+  "locked_visual": {
+    "parameters_total": 1169950,
+    "fp32_weight_bytes": 4679800,
+    "latency": {
+      "mean_ms": 3.6951747150000003,
+      "median_ms": 3.607936,
+      "p95_ms": 3.8074044999999996,
+      "p99_ms": 5.82440229,
+      "min_ms": 3.506875,
+      "max_ms": 6.374174,
+      "repeats": 2000,
+      "deadline_violation_rate_20ms": 0.0,
+      "deadline_violation_rate_50ms": 0.0,
+      "deadline_violation_rate_100ms": 0.0,
+      "peak_cuda_memory_bytes": 20284928
+    }
+  }
+}

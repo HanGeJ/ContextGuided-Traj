@@ -1,0 +1,366 @@
+{
+  "mode": "inventory_only",
+  "raw_datasets_exported": false,
+  "weights_publicly_licensed": "NOT_VERIFIED",
+  "expected_count": 51,
+  "found_count": 51,
+  "files": [
+    {
+      "published_relative_path": "ethucy/baseline/eth/seed_42.pt",
+      "source_relative_path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/baseline/eth/seed_42/best_model.pt",
+      "exists": true,
+      "size_bytes": 3645,
+      "sha256": "e400045400314950f3a47462f1db50a9d6416f7908237004379e4d1b5e0c2c7f"
+    },
+    {
+      "published_relative_path": "ethucy/baseline/eth/seed_43.pt",
+      "source_relative_path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/baseline/eth/seed_43/best_model.pt",
+      "exists": true,
+      "size_bytes": 3645,
+      "sha256": "54489378bc4d28022e57bdd4cb7836433a94916a363e3b1262f84194bd92a1a6"
+    },
+    {
+      "published_relative_path": "ethucy/baseline/eth/seed_44.pt",
+      "source_relative_path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/baseline/eth/seed_44/best_model.pt",
+      "exists": true,
+      "size_bytes": 3645,
+      "sha256": "35f36fb391a50986fb7de649fd5ef83104b6312fdbd5040610d34635640e40d9"
+    },
+    {
+      "published_relative_path": "ethucy/baseline/hotel/seed_42.pt",
+      "source_relative_path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/baseline/hotel/seed_42/best_model.pt",
+      "exists": true,
+      "size_bytes": 3645,
+      "sha256": "b7242e53f31350158f9934c9643009929a393996dbf7d41b7907fbb8db847dda"
+    },
+    {
+      "published_relative_path": "ethucy/baseline/hotel/seed_43.pt",
+      "source_relative_path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/baseline/hotel/seed_43/best_model.pt",
+      "exists": true,
+      "size_bytes": 3645,
+      "sha256": "baf8963b75da49841b724d3a31c1c45780c44dd9c5b23cad419e96e5d8267f32"
+    },
+    {
+      "published_relative_path": "ethucy/baseline/hotel/seed_44.pt",
+      "source_relative_path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/baseline/hotel/seed_44/best_model.pt",
+      "exists": true,
+      "size_bytes": 3645,
+      "sha256": "6790ee9424b4547ff08726d821a47271bc9f139a780483547938221bd14909d1"
+    },
+    {
+      "published_relative_path": "ethucy/baseline/univ/seed_42.pt",
+      "source_relative_path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/baseline/univ/seed_42/best_model.pt",
+      "exists": true,
+      "size_bytes": 3645,
+      "sha256": "93318e8574cde017c1ec5a8a0dde7c5ce6c1220ba5e6544e64ea67142797f9e9"
+    },
+    {
+      "published_relative_path": "ethucy/baseline/univ/seed_43.pt",
+      "source_relative_path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/baseline/univ/seed_43/best_model.pt",
+      "exists": true,
+      "size_bytes": 3645,
+      "sha256": "5f53a220f83af9dccc73a6939ffba5c8533209239819b4a2d7763e55dae6d48a"
+    },
+    {
+      "published_relative_path": "ethucy/baseline/univ/seed_44.pt",
+      "source_relative_path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/baseline/univ/seed_44/best_model.pt",
+      "exists": true,
+      "size_bytes": 3645,
+      "sha256": "036c784cbbd9ad773bbad8baa024e9a36e9ff9c5d40ca9339fdd6199957a12b9"
+    },
+    {
+      "published_relative_path": "ethucy/baseline/zara1/seed_42.pt",
+      "source_relative_path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/baseline/zara1/seed_42/best_model.pt",
+      "exists": true,
+      "size_bytes": 3645,
+      "sha256": "0be901e5a1c8d5492d44e1d5c2066b78ff80a635ec652ce47dfe30b15a7fedbc"
+    },
+    {
+      "published_relative_path": "ethucy/baseline/zara1/seed_43.pt",
+      "source_relative_path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/baseline/zara1/seed_43/best_model.pt",
+      "exists": true,
+      "size_bytes": 3645,
+      "sha256": "3ba2404f8ac01db685a8766a0e7c22238ec98f74d458f7b53318d0e92bf1c86c"
+    },
+    {
+      "published_relative_path": "ethucy/baseline/zara1/seed_44.pt",
+      "source_relative_path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/baseline/zara1/seed_44/best_model.pt",
+      "exists": true,
+      "size_bytes": 3645,
+      "sha256": "335ca06e2cb3f44d6acecac88fcb6ce769e1cd246fbc528b2fb27d6a5e9d5e64"
+    },
+    {
+      "published_relative_path": "ethucy/baseline/zara2/seed_42.pt",
+      "source_relative_path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/baseline/zara2/seed_42/best_model.pt",
+      "exists": true,
+      "size_bytes": 3645,
+      "sha256": "ec5dadd7fa566f18bc9d4b286f4e10e9fee01b2d6224afade13331b69510838e"
+    },
+    {
+      "published_relative_path": "ethucy/baseline/zara2/seed_43.pt",
+      "source_relative_path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/baseline/zara2/seed_43/best_model.pt",
+      "exists": true,
+      "size_bytes": 3645,
+      "sha256": "37253dab2b0cff17802e05364fe82611d2d788f5a5ba8aa17fadc489fbdcb3ce"
+    },
+    {
+      "published_relative_path": "ethucy/baseline/zara2/seed_44.pt",
+      "source_relative_path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/baseline/zara2/seed_44/best_model.pt",
+      "exists": true,
+      "size_bytes": 3645,
+      "sha256": "ad760a405c33690f526427c5c5e2df1d860ecc9ceefab2a25e0137fc764ae3c1"
+    },
+    {
+      "published_relative_path": "ethucy/multihyp/eth/seed_42.pt",
+      "source_relative_path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/multihyp/eth/seed_42/best_model.pt",
+      "exists": true,
+      "size_bytes": 289845,
+      "sha256": "6a27914e2b6d08e0960471789737e6f5f8752d9d319499cb952acb8255ced889"
+    },
+    {
+      "published_relative_path": "ethucy/multihyp/eth/seed_43.pt",
+      "source_relative_path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/multihyp/eth/seed_43/best_model.pt",
+      "exists": true,
+      "size_bytes": 289845,
+      "sha256": "5bccc58061a42fb501361236416a0bc5fcb3041c80bc334ee3ab81934ee0f189"
+    },
+    {
+      "published_relative_path": "ethucy/multihyp/eth/seed_44.pt",
+      "source_relative_path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/multihyp/eth/seed_44/best_model.pt",
+      "exists": true,
+      "size_bytes": 289845,
+      "sha256": "f738d1a0a37ddcb7496dd238147f4f108de86305bd28aeef7f7dc454bc90ce34"
+    },
+    {
+      "published_relative_path": "ethucy/multihyp/hotel/seed_42.pt",
+      "source_relative_path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/multihyp/hotel/seed_42/best_model.pt",
+      "exists": true,
+      "size_bytes": 289845,
+      "sha256": "46c982aa87c0d34bb79d5f8c1853312d4b8be3b522756b7b6957912e0c03a155"
+    },
+    {
+      "published_relative_path": "ethucy/multihyp/hotel/seed_43.pt",
+      "source_relative_path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/multihyp/hotel/seed_43/best_model.pt",
+      "exists": true,
+      "size_bytes": 289845,
+      "sha256": "ec912ed7f2a7d87d70737984483b46ee608bde42c81f9549cdeb2ae3d4cde850"
+    },
+    {
+      "published_relative_path": "ethucy/multihyp/hotel/seed_44.pt",
+      "source_relative_path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/multihyp/hotel/seed_44/best_model.pt",
+      "exists": true,
+      "size_bytes": 289845,
+      "sha256": "9885c09605b492d7a6c2a57e5068f53f5dd103f45ac21a16464cf82d33c0352b"
+    },
+    {
+      "published_relative_path": "ethucy/multihyp/univ/seed_42.pt",
+      "source_relative_path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/multihyp/univ/seed_42/best_model.pt",
+      "exists": true,
+      "size_bytes": 289845,
+      "sha256": "a611d426afba1b252c38feb41d47290d4f98be72e92d6ba67edcb15807306781"
+    },
+    {
+      "published_relative_path": "ethucy/multihyp/univ/seed_43.pt",
+      "source_relative_path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/multihyp/univ/seed_43/best_model.pt",
+      "exists": true,
+      "size_bytes": 289845,
+      "sha256": "3d90f3b0f16aabaceda4906d95af5ca39d46da89c277b079255f9ddd013b59e4"
+    },
+    {
+      "published_relative_path": "ethucy/multihyp/univ/seed_44.pt",
+      "source_relative_path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/multihyp/univ/seed_44/best_model.pt",
+      "exists": true,
+      "size_bytes": 289845,
+      "sha256": "0020c7d0c765cb8f391a1b4c8ad2673a359d62cc7d30e29f545c9d7099109e75"
+    },
+    {
+      "published_relative_path": "ethucy/multihyp/zara1/seed_42.pt",
+      "source_relative_path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/multihyp/zara1/seed_42/best_model.pt",
+      "exists": true,
+      "size_bytes": 289845,
+      "sha256": "9175e89d5df6d279292dd39053af25fbc62f5da3c7d0b3d63d4915df201e8b99"
+    },
+    {
+      "published_relative_path": "ethucy/multihyp/zara1/seed_43.pt",
+      "source_relative_path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/multihyp/zara1/seed_43/best_model.pt",
+      "exists": true,
+      "size_bytes": 289845,
+      "sha256": "0887f5f8a0fcdd1e963f771c8a19482ac271377cbbc5c1bf5ab3b3a2b4a4fb41"
+    },
+    {
+      "published_relative_path": "ethucy/multihyp/zara1/seed_44.pt",
+      "source_relative_path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/multihyp/zara1/seed_44/best_model.pt",
+      "exists": true,
+      "size_bytes": 289845,
+      "sha256": "bc235f17433fb6675f78ed0a128eaa517b6e018d593c4789717f352622b898d5"
+    },
+    {
+      "published_relative_path": "ethucy/multihyp/zara2/seed_42.pt",
+      "source_relative_path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/multihyp/zara2/seed_42/best_model.pt",
+      "exists": true,
+      "size_bytes": 289845,
+      "sha256": "3c6321e9c475ec98435485507b5424b903f5b0814d76a07946beb568e3f69638"
+    },
+    {
+      "published_relative_path": "ethucy/multihyp/zara2/seed_43.pt",
+      "source_relative_path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/multihyp/zara2/seed_43/best_model.pt",
+      "exists": true,
+      "size_bytes": 289845,
+      "sha256": "0eb227c3d80d8a121d638c0db0c4936ee462fc1cda56f7abdcf97ffb81e2448e"
+    },
+    {
+      "published_relative_path": "ethucy/multihyp/zara2/seed_44.pt",
+      "source_relative_path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/multihyp/zara2/seed_44/best_model.pt",
+      "exists": true,
+      "size_bytes": 289845,
+      "sha256": "f873a5a9708e48606f61f8baae663ab6a767db3150614e9fb80d865900c9115e"
+    },
+    {
+      "published_relative_path": "ethucy/multihyp_social/eth/seed_42.pt",
+      "source_relative_path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/multihyp_social/eth/seed_42/best_model.pt",
+      "exists": true,
+      "size_bytes": 339893,
+      "sha256": "63cf4f9aa629fd4f1990e4a29bbc4820a6d1cd454f0e43580dc0b207bbce3ce1"
+    },
+    {
+      "published_relative_path": "ethucy/multihyp_social/eth/seed_43.pt",
+      "source_relative_path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/multihyp_social/eth/seed_43/best_model.pt",
+      "exists": true,
+      "size_bytes": 339893,
+      "sha256": "cd436263ea77c685cbc806f2ab3caaec9c5878e6e8ea60828c6bd1c52ee18f67"
+    },
+    {
+      "published_relative_path": "ethucy/multihyp_social/eth/seed_44.pt",
+      "source_relative_path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/multihyp_social/eth/seed_44/best_model.pt",
+      "exists": true,
+      "size_bytes": 339893,
+      "sha256": "de81211d3fce03fbed707ce4338030cc2214e297d68799c058f336004008f059"
+    },
+    {
+      "published_relative_path": "ethucy/multihyp_social/hotel/seed_42.pt",
+      "source_relative_path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/multihyp_social/hotel/seed_42/best_model.pt",
+      "exists": true,
+      "size_bytes": 339893,
+      "sha256": "8e737fb81993248a9d72fa612ff6b04b59389fe15a28ddb6828a9fee15367427"
+    },
+    {
+      "published_relative_path": "ethucy/multihyp_social/hotel/seed_43.pt",
+      "source_relative_path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/multihyp_social/hotel/seed_43/best_model.pt",
+      "exists": true,
+      "size_bytes": 339893,
+      "sha256": "19f1d1832938e5e4ad1a14db3a973dc2a62f0516e02ce3f363d27917474835ee"
+    },
+    {
+      "published_relative_path": "ethucy/multihyp_social/hotel/seed_44.pt",
+      "source_relative_path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/multihyp_social/hotel/seed_44/best_model.pt",
+      "exists": true,
+      "size_bytes": 339893,
+      "sha256": "58a197cd91e4b46e445306e5ce01a720f84680f2299ceadd236b4d0d3943af72"
+    },
+    {
+      "published_relative_path": "ethucy/multihyp_social/univ/seed_42.pt",
+      "source_relative_path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/multihyp_social/univ/seed_42/best_model.pt",
+      "exists": true,
+      "size_bytes": 339893,
+      "sha256": "6096a0f93f98d89bce557b8bd135197af838d48c192ee9a4b40751c71a5a58a1"
+    },
+    {
+      "published_relative_path": "ethucy/multihyp_social/univ/seed_43.pt",
+      "source_relative_path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/multihyp_social/univ/seed_43/best_model.pt",
+      "exists": true,
+      "size_bytes": 339893,
+      "sha256": "8cc1279ad04e0ab13fe15d0867ca96e133400b61b27ad0843efc4560aaa0d18b"
+    },
+    {
+      "published_relative_path": "ethucy/multihyp_social/univ/seed_44.pt",
+      "source_relative_path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/multihyp_social/univ/seed_44/best_model.pt",
+      "exists": true,
+      "size_bytes": 339893,
+      "sha256": "0ebfc9164a168082b51afc0ffc44a2cb37ce000f00d8e0c8a893afff5b3165a2"
+    },
+    {
+      "published_relative_path": "ethucy/multihyp_social/zara1/seed_42.pt",
+      "source_relative_path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/multihyp_social/zara1/seed_42/best_model.pt",
+      "exists": true,
+      "size_bytes": 339893,
+      "sha256": "5c4b05b195102a62b275cdc73425e89b116d753ec8adc959f6ed92b0c1d23382"
+    },
+    {
+      "published_relative_path": "ethucy/multihyp_social/zara1/seed_43.pt",
+      "source_relative_path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/multihyp_social/zara1/seed_43/best_model.pt",
+      "exists": true,
+      "size_bytes": 339893,
+      "sha256": "86eac7176ff10fbb7799c6e27b69a852e9c7a37fcf12dc1273e6e9c7108fd3d9"
+    },
+    {
+      "published_relative_path": "ethucy/multihyp_social/zara1/seed_44.pt",
+      "source_relative_path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/multihyp_social/zara1/seed_44/best_model.pt",
+      "exists": true,
+      "size_bytes": 339893,
+      "sha256": "407f46ace7b3c8db402d857440b8a427f9c17545bcd0df4706626dcc769242a7"
+    },
+    {
+      "published_relative_path": "ethucy/multihyp_social/zara2/seed_42.pt",
+      "source_relative_path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/multihyp_social/zara2/seed_42/best_model.pt",
+      "exists": true,
+      "size_bytes": 339893,
+      "sha256": "ed3e967c088667939da75d0518dd5abab2a93cfbfb2bd4b1caf1d5ea3f778d2f"
+    },
+    {
+      "published_relative_path": "ethucy/multihyp_social/zara2/seed_43.pt",
+      "source_relative_path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/multihyp_social/zara2/seed_43/best_model.pt",
+      "exists": true,
+      "size_bytes": 339893,
+      "sha256": "d566eabe4f8ae7082c816539e655629e6b356dd0db1e6515850554786120044b"
+    },
+    {
+      "published_relative_path": "ethucy/multihyp_social/zara2/seed_44.pt",
+      "source_relative_path": "runs/tmm_stage3e_ethucy_final/ethucy_5fold_social/multihyp_social/zara2/seed_44/best_model.pt",
+      "exists": true,
+      "size_bytes": 339893,
+      "sha256": "65a226981289b389e79e259b342f4f4ac27bcf466880a78f95955c25dc25e5ee"
+    },
+    {
+      "published_relative_path": "sdd/generator/seed_42.pt",
+      "source_relative_path": "runs/tmm_stage3b_raw_control/sdd_raw_visual/multihyp_social/sdd/seed_42/best_model.pt",
+      "exists": true,
+      "size_bytes": 339893,
+      "sha256": "6225330057abafc3a9fc8313cd2edcd22128bfefd8053c76f7a8bba98bdf2a2e"
+    },
+    {
+      "published_relative_path": "sdd/visual/seed_42.pt",
+      "source_relative_path": "runs/tmm_stage3d_decoupled/decoupled_social_visual_adapter/m16_160px/mobilenet_v3_small/frozen/pretrained/cscale_0.2/soft_t0.05_d0.0001/seed_42/geometry_best.pt",
+      "exists": true,
+      "size_bytes": 4837843,
+      "sha256": "559d2259883ea608d93d8ca1a12b2422fbc116dafe3720d2f70ed12c1a8e50c9"
+    },
+    {
+      "published_relative_path": "sdd/generator/seed_43.pt",
+      "source_relative_path": "runs/tmm_stage3b_raw_control/sdd_raw_visual/multihyp_social/sdd/seed_43/best_model.pt",
+      "exists": true,
+      "size_bytes": 339893,
+      "sha256": "1e278fa6d95a7b683f1e154349a69022713faf2f537a469fa096174105663156"
+    },
+    {
+      "published_relative_path": "sdd/visual/seed_43.pt",
+      "source_relative_path": "runs/tmm_stage3d_decoupled/decoupled_social_visual_adapter/m16_160px/mobilenet_v3_small/frozen/pretrained/cscale_0.2/soft_t0.05_d0.0001/seed_43/geometry_best.pt",
+      "exists": true,
+      "size_bytes": 4837843,
+      "sha256": "f963c5e52b9e5684994dcd7309e76f5501c53e6bcf9157d0272fdf0999062457"
+    },
+    {
+      "published_relative_path": "sdd/generator/seed_44.pt",
+      "source_relative_path": "runs/tmm_stage3b_raw_control/sdd_raw_visual/multihyp_social/sdd/seed_44/best_model.pt",
+      "exists": true,
+      "size_bytes": 339893,
+      "sha256": "0816242c000b7b641617c91205bbb3f40c011cd49ddb4395050e01df7ec336aa"
+    },
+    {
+      "published_relative_path": "sdd/visual/seed_44.pt",
+      "source_relative_path": "runs/tmm_stage3d_decoupled/decoupled_social_visual_adapter/m16_160px/mobilenet_v3_small/frozen/pretrained/cscale_0.2/soft_t0.05_d0.0001/seed_44/geometry_best.pt",
+      "exists": true,
+      "size_bytes": 4837843,
+      "sha256": "46551755974c66283fadc6ec2b936eac8855771119370b601300e882c1f9ee1c"
+    }
+  ]
+}

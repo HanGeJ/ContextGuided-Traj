@@ -1,0 +1,122 @@
+{
+  "package": "TMM_TableIV_ControlledRepro_v1",
+  "version": "1.0",
+  "common": {
+    "variant": "multihyp_social",
+    "data_root": "data/ethucy_5fold_social",
+    "val_source": "train_group",
+    "val_ratio": 0.1,
+    "epochs": 100,
+    "batch_size": 512,
+    "num_workers": 8,
+    "lr": 0.01,
+    "best_k": 20,
+    "num_modes": 20,
+    "cls_lambda": 0.2,
+    "nll_lambda": 0.1,
+    "ranking_loss": "hard_ce",
+    "checkpoint_metric": "minade_k",
+    "eval_views": 1,
+    "max_mask_steps": 4,
+    "relative_coords": true
+  },
+  "arms": {
+    "base_losses": {
+      "use_augment": false,
+      "rotation_max_deg": 0.0,
+      "mask_prob": 0.0,
+      "noise_std": 0.0
+    },
+    "rotation_only": {
+      "use_augment": true,
+      "rotation_max_deg": 180.0,
+      "mask_prob": 0.0,
+      "noise_std": 0.0
+    },
+    "mask_noise_only": {
+      "use_augment": true,
+      "rotation_max_deg": 0.0,
+      "mask_prob": 0.3,
+      "noise_std": 0.02
+    },
+    "rotation_mask_noise": {
+      "use_augment": true,
+      "rotation_max_deg": 180.0,
+      "mask_prob": 0.3,
+      "noise_std": 0.02
+    }
+  },
+  "folds": [
+    "eth",
+    "hotel",
+    "univ",
+    "zara1",
+    "zara2"
+  ],
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "source_hashes": {
+    "config.py": "3d1ac77050a133b60de0955375d595c58300cfb52d8419d8edf883a97482d286",
+    "train.py": "2324877f12715a65ee0fe9e748640faa6581f317d0d510cdc948754e0dca9818",
+    "models/components.py": "506c0c3a422131a5f8545aa12455ee311f6490d0bc465adda0b3fef3c2b094ab",
+    "models/factory.py": "9403b93e35a1ed72031636597e4df376d767b49af19511aed3b2b1e371a50815",
+    "models/__init__.py": "46c416cca4685cc2d79e71f451fe5cd6a6b7b03a0f7959e7189c9cf7a6eb6c69",
+    "data/dataset.py": "822dcf34e954ba7604da0d757b1fda2f36341e31a455cc5044d59cba1351f591",
+    "data/__init__.py": "c65a9162cf8d3a20765e15a07f0e0bb656d3cff43f1f03abfcc2fee09adac34f",
+    "utils/metrics.py": "a8b57017241f49b85671cd02a82fbe77bcee37d539439629dc35e933637ec942",
+    "utils/evaluation.py": "95a2aeee2541fc340e6c4430218547f310c17cf0d4c9b1a57860c735e0a71e9d",
+    "utils/training.py": "c54497fcab7e86b0df2af4cd12526967fdb65acb3ae00f9ff452330cacb31cad",
+    "utils/seed.py": "f69d5189d4d436368c465ba6f0a1a6224cdceeb8136cf20dbe7f20eee5e58230",
+    "utils/__init__.py": "d477b4cda5e6515229c25dcec52abb5c6f8a4f9efe828fc98913b7ade6f8da83"
+  },
+  "input_hashes": {
+    "eth/train.npz": {
+      "bytes": 2032361,
+      "sha256": "a5ca4ae763fde78f6076d047b578fd311b5d26ab49452de828448a4575cf0cce"
+    },
+    "eth/test.npz": {
+      "bytes": 206116,
+      "sha256": "3e943476e498e9fdb8b78d635c3fcfb35339ebc2c8eb7455f54b18363e06c765"
+    },
+    "hotel/train.npz": {
+      "bytes": 2159478,
+      "sha256": "b9ff6d942eac17a076ff8f6493d911d16b961988c1410d0338622109cad64d19"
+    },
+    "hotel/test.npz": {
+      "bytes": 78704,
+      "sha256": "8cce37b564b4ba292b823dd2a008ef5f19055cf5650e1a20eebd32f36131b82a"
+    },
+    "univ/train.npz": {
+      "bytes": 772028,
+      "sha256": "5f09879b932e607ec8c5e0dc7fef6081b725130b32a063b8cf962fbf2d45066e"
+    },
+    "univ/test.npz": {
+      "bytes": 1466464,
+      "sha256": "6f2efdbeb0f153d39e32fbd5acbfa32e7a00c5ae3d802ca4b6c45eaa8c3b662c"
+    },
+    "zara1/train.npz": {
+      "bytes": 2080595,
+      "sha256": "a67c4fc26e215e111bc58a7c2d46a1eabdc50dc5e83dd425ceb84394e23caf6a"
+    },
+    "zara1/test.npz": {
+      "bytes": 158178,
+      "sha256": "e84eee26d9ff84831f190fb2830aadd790a2e8d6503db4d025e8767e4df70084"
+    },
+    "zara2/train.npz": {
+      "bytes": 1906372,
+      "sha256": "b86289dd8e98c2652ba4b7631e4ed8862be46da0fd8bcb60e44cf0a52066d756"
+    },
+    "zara2/test.npz": {
+      "bytes": 332263,
+      "sha256": "daaa5ab41de4ac369c1033f2a9dac82a6db2fc3504bfe59d5b79f32f30c8d072"
+    }
+  },
+  "training_script": "train.py",
+  "macro_rule": "mean of 3 seed means within each held-out fold, then mean of 5 fold means",
+  "checkpoint_selection": "train-group validation minade_k",
+  "test_policy": "fixed protocol; evaluate held-out test after selecting checkpoint on train-group validation",
+  "created_utc": "2026-10-10T22:18:23.427300+00:00"
+}

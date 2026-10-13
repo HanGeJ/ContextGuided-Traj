@@ -1,0 +1,49 @@
+# Code in data/ is part of the project. Exclude downloaded/generated datasets only.
+/data/*
+!/data/README.md
+!/data/__init__.py
+!/data/dataset.py
+!/data/visual_dataset.py
+
+# Frozen model checkpoints and unpublished results; keep outside Git
+/checkpoints/*
+!/checkpoints/README.md
+/runs/
+/logs/
+/external/
+/publication_export/
+/ContextGuided_private_assets/
+
+# Extra safeguards for nested locations
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+*.npz
+*.npy
+*.pkl
+*.pickle
+*.tar
+*.tar.gz
+*.mp4
+*.avi
+*.mov
+*.jpg
+*.jpeg
+*.png
+*.eps
+*.pdf
+*.tif
+*.tiff
+
+# Environment and credentials
+__pycache__/
+.pytest_cache/
+.venv/
+venv/
+*.egg-info/
+.env
+.env.*
+*.secret
+*.key
