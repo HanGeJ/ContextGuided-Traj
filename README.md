@@ -1,99 +1,75 @@
-# ContextGuided-Traj: A paper-aligned reproduction package
+# ContextGuided-Traj
 
-**Paper:** *Context-Guided Trend–Residual Learning for Efficient Multi-Hypothesis Pedestrian Trajectory Forecasting* (IEEE TIP submission candidate).
+Code for *Context-Guided Trend–Residual Learning for Efficient Multi-Hypothesis Pedestrian Trajectory Forecasting*.
 
-This is a **private-staging release candidate (RC2)** reconstructed from the archived TMM-v1 Stage 3E and Stage SDDS project code and the controlled Table IV audit. It deliberately excludes datasets, third-party code, downloaded pretrained weights, model checkpoints, and raw visualization frames.
+The implementation includes trend–residual trajectory generation, social context,
+candidate-aligned visual correction, and training augmentation. Training and
+evaluation scripts cover ETH–UCY and SDD.
 
-> **Release state: candidate / not yet independently end-to-end verified.** Code provenance, CPU model-forward smoke and aggregate audit data are included. Reproducing published ETH–UCY and SDD scores requires the official datasets, the exact frozen checkpoints, and a compatible CUDA environment. Do not describe this archive as a one-click reproduction of the paper until the checklist in `docs/RELEASE_CHECKLIST.md` passes on a clean machine.
+[中文说明](README_ZH.md)
 
-## Implemented method
+## Installation
 
-- Shared time-linear trend + K=20 residual hypotheses, confidence logits, coordinate-wise variances
-- Lightweight social encoding of observed relative neighbor histories
-- Optional candidate-conditioned visual adapter using a frozen pretrained MobileNetV3-Small
-- Training-only rotation, observation masking and Gaussian observation noise
-- Five-fold ETH–UCY model training and evaluation, SDD locked evaluation, controlled augmentation ablation and audited efficiency tooling
-
-## Minimal setup
-
-Python 3.10–3.11 and a mutually compatible PyTorch/torchvision pair are recommended. Install CUDA-enabled packages using the [official PyTorch instructions](https://pytorch.org/get-started/locally/) before `pip install -r requirements.txt`. Images are downloaded by torchvision only when the optional ImageNet-pretrained visual encoder is instantiated. Dataset downloads are **not** performed implicitly.
+Use Python 3.10 or 3.11. Install a compatible PyTorch/torchvision pair for your
+CUDA environment using the [PyTorch installation guide](https://pytorch.org/get-started/locally/), then:
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
+python -m pip install -r requirements.txt
 python tools/smoke_model.py
-python tools/check_release.py
 ```
 
-## Reproduce ETH–UCY (5-fold LOSO)
+The shell scripts below run with Bash on Linux, WSL, or Git Bash.
 
-Obtain ETH/UCY from the rights holders. Arrange the canonical files under `data/eth_ucy_raw` as documented in `docs/DATASETS.md`. Then:
+## Data and checkpoints
+
+See [docs/DATASETS.md](docs/DATASETS.md) for dataset sources, directory layouts,
+SDD recording splits, scale metadata, and image crop preparation.
+Datasets and trained checkpoints are obtained separately. The checkpoint
+inventory is in [docs/CHECKPOINT_INVENTORY_20261014.json](docs/CHECKPOINT_INVENTORY_20261014.json).
+
+## ETH–UCY
+
+Prepare the five folds, then run one fold and seed:
 
 ```bash
-python prepare_ethucy_5fold_social.py \
-  --raw_root data/eth_ucy_raw \
-  --out_dir data/ethucy_5fold_social \
-  --obs_len 8 --pred_len 12 --sample_stride 1 --neighbor_topk 4
-# First run ONE fold for verification:
+python prepare_ethucy_5fold_social.py --raw_root data/eth_ucy_raw --out_dir data/ethucy_5fold_social --obs_len 8 --pred_len 12 --sample_stride 1 --neighbor_topk 4
 FOLDS=eth SEEDS=42 bash scripts/reproduce_ethucy.sh
-# Full paper-controlled generator (5 folds x 3 seeds):
-bash scripts/reproduce_ethucy.sh
 ```
 
-- **Model selection**: `val_source=train_group`, validation ratio 0.1, held-out scene used only for final evaluation.
-- **Training**: `multihyp_social`, 100 epochs, Adam, lr=0.01, batch=512, K=20, augmentation enabled, classification lambda=0.2, variance lambda=0.1.
-- The training command saves a `best_model.pt` under `runs/tmm_stage3e_ethucy_final/...`; the held-out result and configuration are in `summary.json`.
-- `baseline` and `multihyp` for Table III: `VARIANTS='baseline multihyp multihyp_social' bash scripts/reproduce_ethucy.sh`.
+Run `bash scripts/reproduce_ethucy.sh` for all five folds and seeds 42, 43, and 44.
+The script selects checkpoints using training-group validation
+(`val_source=train_group`, `val_ratio=0.1`) and evaluates on the held-out scene.
 
-## Reproduce SDD
+## SDD
 
-SDD is **not** available in this repository. It requires raw annotations and reference images, the specific TUTR recording split, and recording-scale YAML. See `docs/DATASETS.md`. The published SDD results use distinct pixel-space benchmark scores and meter-space controlled ablations; never mix these units. `scripts/reproduce_sdd.sh` checks the three frozen generator/geometry checkpoint pairs before running a guarded evaluator.
+Prepare the data and image crops using the dataset documentation. Place the
+frozen checkpoints in the paths checked by `scripts/reproduce_sdd.sh`, then:
 
 ```bash
 bash scripts/reproduce_sdd.sh --check
-# After assembling licensed data, crop caches and frozen checkpoints:
-bash scripts/reproduce_sdd.sh --evaluate
+ACKNOWLEDGE_SDD_HELDOUT=1 bash scripts/reproduce_sdd.sh --evaluate
 ```
 
-The SDD evaluator contains its original seal mechanism and refuses another test by default. Repeated held-out testing for model selection is prohibited.
+SDD benchmark results use pixels; the controlled ablation records use meters.
 
-## Reproduce controlled robustness ablation (Table IV)
-
-The original complete controlled runner is preserved in `TMM_TableIV_ControlledRepro_v1`. It requires **60 full trainings** (4 arms × 5 folds × 3 seeds), using the exact four settings and `train_group` model selection. To use the historical runner:
+## Tests and tools
 
 ```bash
-python TMM_TableIV_ControlledRepro_v1/repro.py --help
+python -m unittest discover -s tests -v
+python tools/check_release.py
 ```
 
-The 60 original experiment summaries and aggregate values are available as provenance under `results/table_iv`. **Only the new controlled reproduction** (not the obsolete original exploratory values) supports Table IV.
+- `train.py` and `evaluate.py`: core model training and evaluation.
+- `TMM_TableIV_ControlledRepro_v1/`: controlled augmentation experiments.
+- `experiments/efficiency/`: inference benchmarking and its timing protocol.
+- `tools/export_autodl_checkpoints.py`: export the recorded checkpoints locally.
+- `tools/verify_staged_checkpoints.py`: verify an export against its inventory.
+- `tools/check_git_index.py`: verify staged source files against the staged hash manifest.
 
-## Efficiency
-
-`experiments/efficiency` preserves audited GPU benchmarking scripts and source-limited run summaries. The 0.660 ms *single-target native inference*, the multi-target GPU-resident inference and the *prepared in-memory pipeline* use different timing scopes. Neither the GitHub README nor plots shall blend these metrics into a single speedup claim. See `docs/EFFICIENCY_PROTOCOL.md`.
-
-## GitHub private staging
-
-The source-only package can be published first to a **private** repository.
-For Windows upload, read `docs/PUBLISH_WINDOWS_GITHUB_DESKTOP_ZH.md`.
-Git ignores raw datasets and checkpoints but retains the required `data/*.py`
-source files; `tools/check_git_index.py` can verify the actual staged source
-manifest before pushing.
-
-The AutoDL checkpoint audit reported 51/51 existing files (23.87 MiB), but
-this was **inventory-only**; the checkpoint bytes and public redistribution
-rights have not been verified. See `docs/CHECKPOINT_INVENTORY_NOTES.md`.
-
-## Weights, data and re-drawing Fig. 6/7
-
-- `tools/export_autodl_checkpoints.py` inventories or exports the known formal checkpoint paths from an AutoDL project, with SHA256 checksums; it excludes raw datasets and third-party weights.
-- `docs/DATASETS.md` describes required inputs and their external origins. Follow the respective data terms.
-- Figure source scripts are placed in `visualization/`; the native scene frames and prediction arrays must be provided separately under the proper permissions. Fig. 6's historical video timing/body-anchor alignment remains **unverified**, and should be audited before its underlying array bundle is released as verified examples.
-
-## Status and citation
-
-See `docs/RELEASE_CHECKLIST.md` and `docs/PROVENANCE.md` for verified versus pending items. The publication citation can be added after journal acceptance; do not assert publication at this stage.
+Configuration and result records are available in `results/` and `docs/`.
+Citation metadata is provided in [CITATION.cff](CITATION.cff).
 
 ## License
 
-**No open-source license has been chosen.** A public GitHub repository without a license does not grant a general right to redistribute or reuse its contents. Confirm ownership/affiliation permissions and choose a license before public release. See `docs/LICENSING.md`.
+Source code is distributed under the [MIT License](LICENSE). External datasets,
+pretrained weights, and external repositories retain their respective terms.

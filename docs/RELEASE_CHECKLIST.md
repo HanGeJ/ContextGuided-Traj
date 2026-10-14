@@ -14,7 +14,7 @@
 - [ ] Verify paper figure 7 measurement rounding and original source results
 - [ ] Validate frozen Table IV configuration and published aggregate against raw 60 run logs
 - [ ] Approve copyright/affiliation release of source code, model weights and visual frames
-- [ ] Choose software license; add LICENSE file and consistent SPDX statements
+- [x] Add MIT LICENSE and consistent README / CITATION.cff license metadata
 - [x] Repair .gitignore to ensure source `data/*.py` is staged; add Git-index checker
-- [ ] Create a private GitHub repository; audit again before switching to public
+- [x] Publish the source repository and inspect its tracked files and history
 - [ ] Tag a fixed paper-associated source version and archive release checksum

@@ -1,24 +1,65 @@
-# ContextGuided-Traj 开源复现候选包
+# ContextGuided-Traj
 
-这是从历史 AutoDL TMM-v1 Stage 3E / Stage SDDS 代码中整理的**论文复现候选版**。目前已包含核心模型、ETH–UCY/SDD 数据转换及评估程序、Table IV 原生实验代码、GPU 效率脚本及审计结果。**尚缺正式权重及原始数据**，因此不能宣称已在新容器完整复现论文指标。
+论文 *Context-Guided Trend–Residual Learning for Efficient Multi-Hypothesis
+Pedestrian Trajectory Forecasting* 的代码。
 
-按顺序操作：
+包含趋势–残差轨迹生成、社会上下文、候选对齐视觉修正和训练增强，以及
+ETH–UCY、SDD 的数据准备、训练和评估脚本。
 
-1. 在本地验证：`python tools/smoke_model.py && python tools/check_release.py`。
-2. 根据 `docs/DATASETS.md` 准备获得授权的数据；运行 `prepare_ethucy_5fold_social.py`。
-3. 在 AutoDL 现存项目根目录执行 `python tools/export_autodl_checkpoints.py --source /root/autodl-tmp/TMM_Traj/source/tmm_v1 --destination /root/autodl-tmp/ContextGuided_export`，默认仅输出缺失检查和哈希清单。
-4. 如权重具有发布许可，再使用 `--include-weights` 复制正式权重；权重备份与公开发布须分开审核。
-5. 通过 `docs/RELEASE_CHECKLIST.md` 中的实际复现检查后，决定 README、许可证与 GitHub 仓库公开状态。
+## 安装
 
-`bash scripts/reproduce_ethucy.sh` 运行五折/三种子正式模型训练；`bash scripts/reproduce_sdd.sh --check` 检查冻结的视觉模型目录。详细命令和评估口径在英文 README 与 docs 内。
+使用 Python 3.10 或 3.11，按 [PyTorch 官方说明](https://pytorch.org/get-started/locally/)
+安装与 CUDA 环境匹配的 PyTorch/torchvision，然后执行：
 
-**注意：** 图 6 原始帧配准曾被标记为未完全审计。重画 EPS 不会自动解决时间映射问题。不要把该问题标成已验证。
+```bash
+python -m pip install -r requirements.txt
+python tools/smoke_model.py
+```
 
-## GitHub 上传修复（RC2）
+Shell 脚本使用 Bash，可在 Linux、WSL 或 Git Bash 中执行。
 
-RC1 的 `.gitignore` 会错误忽略 `data/` 下必须提交的 Python 文件。RC2 已修复，
-并增加 `tools/check_git_index.py` 检查 Git 暂存区是否完整。Windows
-用户按 `docs/PUBLISH_WINDOWS_GITHUB_DESKTOP_ZH.md` 上传至私有仓库。
+## 数据与权重
 
-上一轮 AutoDL checkpoint 清单核验结果为 51/51（仅库存清点）；详见
-`docs/CHECKPOINT_INVENTORY_NOTES.md`。权重尚未经过独立加载和重新评估。
+数据来源、目录结构、SDD 视频划分、尺度信息和图像裁剪要求见
+[docs/DATASETS.md](docs/DATASETS.md)。数据集与训练权重需单独准备；权重
+路径清单见 [docs/CHECKPOINT_INVENTORY_20261014.json](docs/CHECKPOINT_INVENTORY_20261014.json)。
+
+## ETH–UCY
+
+```bash
+python prepare_ethucy_5fold_social.py --raw_root data/eth_ucy_raw --out_dir data/ethucy_5fold_social --obs_len 8 --pred_len 12 --sample_stride 1 --neighbor_topk 4
+FOLDS=eth SEEDS=42 bash scripts/reproduce_ethucy.sh
+```
+
+执行 `bash scripts/reproduce_ethucy.sh` 可运行五折和种子 42、43、44。
+脚本按 `val_source=train_group`、`val_ratio=0.1` 划分验证组，用留出场景评估。
+
+## SDD
+
+按数据文档准备数据和图像裁剪缓存，将冻结权重放在
+`scripts/reproduce_sdd.sh` 检查的路径，然后执行：
+
+```bash
+bash scripts/reproduce_sdd.sh --check
+ACKNOWLEDGE_SDD_HELDOUT=1 bash scripts/reproduce_sdd.sh --evaluate
+```
+
+SDD 基准结果使用像素，受控消融记录使用米。
+
+## 检查与工具
+
+```bash
+python -m unittest discover -s tests -v
+python tools/check_release.py
+```
+
+`train.py`、`evaluate.py` 提供核心训练与评估；`TMM_TableIV_ControlledRepro_v1/`
+提供受控增强实验；`experiments/efficiency/` 提供效率测试。导出权重使用
+`tools/export_autodl_checkpoints.py`，完整性核验使用
+`tools/verify_staged_checkpoints.py`。`tools/check_git_index.py` 核对 Git 暂存区
+文件与暂存区哈希清单。
+
+## 许可证
+
+源码采用 [MIT 许可证](LICENSE)。外部数据集、预训练权重和外部仓库遵循
+各自的许可条款。引用信息见 [CITATION.cff](CITATION.cff)。
